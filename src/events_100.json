@@ -1,0 +1,529 @@
+{
+  "results": [
+    {
+      "registrationIsOpen": false,
+      "id": "f9f3d3c5-a469-4992-bf90-354fe8184b31",
+      "name": "r",
+      "startDate": "2020-11-01T00:00:00",
+      "endDate": "2026-09-04T23:59:59",
+      "city": "Seoul",
+      "cityCountryIso2": "KR"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "21583c19-34d6-41fb-932f-c8e01fcb0082",
+      "name": "Amigos Mazatecos 3x3",
+      "startDate": "2020-12-23T00:00:00",
+      "endDate": "2024-12-23T23:59:00",
+      "city": "Huautla de Jiménez",
+      "cityCountryIso2": "MX"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "24d74c1a-2e9f-4f9b-8ce0-4e5a4d08bd35",
+      "name": "3x3 Lampung barat",
+      "startDate": "2021-07-01T00:00:00",
+      "endDate": "2028-07-05T23:59:59",
+      "city": "Lampung Barat, Lampung",
+      "cityCountryIso2": "ID"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "e2679888-7edd-43f6-9c36-154eaac843e8",
+      "name": "菜鸟杯",
+      "startDate": "2022-03-30T00:00:00",
+      "endDate": "2024-11-01T23:59:59",
+      "city": "Changsha Shi, Hunan",
+      "cityCountryIso2": "CN"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "ec9518fa-07d7-4b4c-b022-ca716295ac58",
+      "name": "YES 3X3 BASKETBALL",
+      "startDate": "2022-05-28T00:00:00",
+      "endDate": "2029-05-21T23:59:59",
+      "city": "Zanzibar City, Zanzibar West",
+      "cityCountryIso2": "TZ",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/e/c/9/5/ec9518fa-07d7-4b4c-b022-ca716295ac58/tournament.80.png?ck=637892097150000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/e/c/9/5/ec9518fa-07d7-4b4c-b022-ca716295ac58/tournament.160.png?ck=637892097150000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/e/c/9/5/ec9518fa-07d7-4b4c-b022-ca716295ac58/tournament.400.png?ck=637892097160000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "f6fa08cc-bc86-4065-97d3-2774b818eaa5",
+      "name": "asd",
+      "startDate": "2022-10-10T00:00:00",
+      "endDate": "2032-11-10T23:59:59",
+      "city": "Barcelona",
+      "cityCountryIso2": "ES"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "ac99a685-6446-4583-8f38-1d1c9bf57ded",
+      "name": "MABB Ligue 3x3",
+      "startDate": "2023-02-15T21:00:00",
+      "endDate": "2042-01-18T23:59:59",
+      "city": "Amiens",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/a/c/9/9/ac99a685-6446-4583-8f38-1d1c9bf57ded/tournament.80.png?ck=638472088210000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/a/c/9/9/ac99a685-6446-4583-8f38-1d1c9bf57ded/tournament.160.png?ck=638472088210000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/a/c/9/9/ac99a685-6446-4583-8f38-1d1c9bf57ded/tournament.400.png?ck=638472088220000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "b3d87615-bf5d-4aa2-a244-3a4886b97445",
+      "name": "Nathan-Clement",
+      "startDate": "2023-04-18T00:00:00",
+      "endDate": "2024-12-06T23:59:59",
+      "city": "Casson, Loire-Atlantique",
+      "cityCountryIso2": "FR"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "86680b05-fb55-468a-aea6-086a1488008d",
+      "name": "RSOA BASKET",
+      "startDate": "2023-04-25T00:00:00",
+      "endDate": "2040-04-20T23:59:59",
+      "city": "Paris",
+      "cityCountryIso2": "CA"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "5e5e9fe1-f501-4947-9850-42f5f88e3961",
+      "name": "1",
+      "startDate": "2023-05-02T00:00:00",
+      "endDate": "2038-01-07T23:59:59.999",
+      "city": "Beijing",
+      "cityCountryIso2": "CL"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "6eff8d1f-e9ce-4e91-a60f-232ddba9cfa8",
+      "name": "Nba",
+      "startDate": "2023-05-30T00:00:00",
+      "endDate": "2024-12-11T23:59:59",
+      "city": "Quebradillas",
+      "cityCountryIso2": "PR"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "fa9e9590-1634-4daa-bd14-7eb349e2eab5",
+      "name": "Test évent",
+      "startDate": "2023-07-07T00:00:00",
+      "endDate": "2028-06-04T23:59:59",
+      "city": "Algiers, Alger",
+      "cityCountryIso2": "DZ"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "81af9287-9d30-480f-91d7-71dbe3d0081b",
+      "name": "3X3 BasketBall Test Event",
+      "startDate": "2023-07-29T18:12:00",
+      "endDate": "2024-07-15T18:11:59",
+      "city": "New Delhi, Delhi",
+      "cityCountryIso2": "IN"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "6b09c4d9-07f5-4d42-9ca5-cbc5f6389ef9",
+      "name": "test",
+      "startDate": "2023-08-21T00:00:00",
+      "endDate": "2028-05-03T23:59:59",
+      "city": "Charleroi",
+      "cityCountryIso2": "US"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "6c850eb8-d06e-4e4e-8e89-144d873f4a07",
+      "name": "my league",
+      "startDate": "2023-08-31T00:00:00",
+      "endDate": "2024-07-02T23:59:59",
+      "city": "Philadelphia",
+      "cityCountryIso2": "US",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/c/8/5/6c850eb8-d06e-4e4e-8e89-144d873f4a07/tournament.80.png?ck=638208459430000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/c/8/5/6c850eb8-d06e-4e4e-8e89-144d873f4a07/tournament.160.png?ck=638208459430000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/c/8/5/6c850eb8-d06e-4e4e-8e89-144d873f4a07/tournament.400.png?ck=638208459440000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "c22d0d5e-1811-4c4f-80e5-1b3156e9131d",
+      "name": "MABB LIGUE 3X3",
+      "startDate": "2023-09-20T21:00:00",
+      "endDate": "2024-10-23T23:00:00",
+      "city": "Amiens",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/c/2/2/d/c22d0d5e-1811-4c4f-80e5-1b3156e9131d/tournament.80.png?ck=638388308280000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/c/2/2/d/c22d0d5e-1811-4c4f-80e5-1b3156e9131d/tournament.160.png?ck=638388308280000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/c/2/2/d/c22d0d5e-1811-4c4f-80e5-1b3156e9131d/tournament.400.png?ck=638388308280000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "21e668ed-fb89-472d-9134-552f4960a21f",
+      "name": "MABB LIGUE 3x3 U18F",
+      "startDate": "2023-09-29T00:00:00",
+      "endDate": "2024-10-26T23:59:59",
+      "city": "Amiens",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/1/e/6/21e668ed-fb89-472d-9134-552f4960a21f/tournament.80.png?ck=638472068660000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/1/e/6/21e668ed-fb89-472d-9134-552f4960a21f/tournament.160.png?ck=638472068660000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/1/e/6/21e668ed-fb89-472d-9134-552f4960a21f/tournament.400.png?ck=638472068660000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "a3cc141f-4956-4059-86df-f3f9cf0117e7",
+      "name": "Urban & Sports 2023",
+      "startDate": "2023-10-17T00:00:00",
+      "endDate": "2024-10-26T23:59:59",
+      "city": "Surabaya",
+      "cityCountryIso2": "ID",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/a/3/c/c/a3cc141f-4956-4059-86df-f3f9cf0117e7/tournament.80.png?ck=638306195710000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/a/3/c/c/a3cc141f-4956-4059-86df-f3f9cf0117e7/tournament.160.png?ck=638306195710000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/a/3/c/c/a3cc141f-4956-4059-86df-f3f9cf0117e7/tournament.400.png?ck=638306195720000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "db2dbf7d-6960-4c4d-8873-c93e333689e8",
+      "name": "MABB LEAGUE 3X3",
+      "startDate": "2023-10-18T21:00:00",
+      "endDate": "2024-10-19T20:59:00",
+      "city": "Amiens",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/d/b/2/d/db2dbf7d-6960-4c4d-8873-c93e333689e8/tournament.80.png?ck=638420753870000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/d/b/2/d/db2dbf7d-6960-4c4d-8873-c93e333689e8/tournament.160.png?ck=638420753870000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/d/b/2/d/db2dbf7d-6960-4c4d-8873-c93e333689e8/tournament.400.png?ck=638420753870000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "6681d057-e9ca-43ac-99df-2dd147556792",
+      "name": "Sremska Mitrovica",
+      "startDate": "2023-10-24T00:00:00",
+      "endDate": "2024-10-24T23:59:59",
+      "city": "Sremska Mitrovica",
+      "cityCountryIso2": "RS",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/6/8/1/6681d057-e9ca-43ac-99df-2dd147556792/tournament.80.png?ck=638336733400000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/6/8/1/6681d057-e9ca-43ac-99df-2dd147556792/tournament.160.png?ck=638336733400000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/6/8/1/6681d057-e9ca-43ac-99df-2dd147556792/tournament.400.png?ck=638336733400000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "21d9c3d1-8a28-406b-ba85-a4c1d314b2bf",
+      "name": "MABB LIGUE 3x3",
+      "startDate": "2023-10-28T16:00:00",
+      "endDate": "2024-10-31T17:30:00",
+      "city": "Amiens, Somme",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/1/d/9/21d9c3d1-8a28-406b-ba85-a4c1d314b2bf/tournament.80.png?ck=638420771820000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/1/d/9/21d9c3d1-8a28-406b-ba85-a4c1d314b2bf/tournament.160.png?ck=638420771820000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/1/d/9/21d9c3d1-8a28-406b-ba85-a4c1d314b2bf/tournament.400.png?ck=638420771820000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "e33df4e2-8ac5-4449-9a8d-d8a0de18f90a",
+      "name": "MABB LIGUE 3x3",
+      "startDate": "2023-11-08T00:00:00",
+      "endDate": "2024-11-01T23:59:59",
+      "city": "Amiens",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/e/3/3/d/e33df4e2-8ac5-4449-9a8d-d8a0de18f90a/tournament.80.png?ck=638472053260000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/e/3/3/d/e33df4e2-8ac5-4449-9a8d-d8a0de18f90a/tournament.160.png?ck=638472053260000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/e/3/3/d/e33df4e2-8ac5-4449-9a8d-d8a0de18f90a/tournament.400.png?ck=638472053260000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "67458847-3298-4d71-8c4f-1344d37d70e1",
+      "name": "MABB LIGUE 3x3",
+      "startDate": "2023-11-15T21:00:00",
+      "endDate": "2024-11-11T23:59:00",
+      "city": "Amiens, Somme",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/7/4/5/67458847-3298-4d71-8c4f-1344d37d70e1/tournament.80.png?ck=638420779630000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/7/4/5/67458847-3298-4d71-8c4f-1344d37d70e1/tournament.160.png?ck=638420779630000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/7/4/5/67458847-3298-4d71-8c4f-1344d37d70e1/tournament.400.png?ck=638420779630000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "de0ae586-ca82-4985-bc59-b679476f27fb",
+      "name": "ED-PED11",
+      "startDate": "2023-11-20T00:00:00",
+      "endDate": "2024-11-21T23:59:59",
+      "city": "Cebu City",
+      "cityCountryIso2": "PH"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "29b13c53-fa82-478d-bab1-c8c8999fb2d3",
+      "name": "BUPATI CUP 3X3 Competition 2023",
+      "startDate": "2023-11-24T00:00:00",
+      "endDate": "2024-11-26T23:59:59",
+      "city": "Gorontalo",
+      "cityCountryIso2": "ID",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/9/b/1/29b13c53-fa82-478d-bab1-c8c8999fb2d3/tournament.80.png?ck=638349486730000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/9/b/1/29b13c53-fa82-478d-bab1-c8c8999fb2d3/tournament.160.png?ck=638349486730000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/9/b/1/29b13c53-fa82-478d-bab1-c8c8999fb2d3/tournament.400.png?ck=638349486730000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "bf701646-0644-4fb7-970c-d3a5a5727569",
+      "name": "Coupe de France 3x3 Entreprises - Etape 1",
+      "startDate": "2023-11-28T00:00:00",
+      "endDate": "2024-11-28T23:59:59",
+      "city": "Mons-en-Barœul",
+      "cityCountryIso2": "FR"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "9af8cc4c-a9e3-497b-9e41-41d6847e2f43",
+      "name": "la nuit du basket 3x3",
+      "startDate": "2023-12-07T00:00:00",
+      "endDate": "2024-12-07T23:59:59",
+      "city": "Poitiers",
+      "cityCountryIso2": "FR"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "63a12592-28a3-4d3f-b1f3-2c9975be61b0",
+      "name": "V 3x3 Escolar Rincón de la Victoria",
+      "startDate": "2023-12-17T00:00:00",
+      "endDate": "2024-12-17T23:59:59",
+      "city": "Rincón de la Victoria, Málaga",
+      "cityCountryIso2": "ES"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "2264e0c2-806c-4fbe-8e7d-6b952bca216c",
+      "name": "MABB LIGUE 3x3 SF",
+      "startDate": "2023-12-29T00:00:00",
+      "endDate": "2024-12-29T23:59:59",
+      "city": "Amiens, Somme",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/2/6/4/2264e0c2-806c-4fbe-8e7d-6b952bca216c/tournament.80.png?ck=638472068180000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/2/6/4/2264e0c2-806c-4fbe-8e7d-6b952bca216c/tournament.160.png?ck=638472068180000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/2/6/4/2264e0c2-806c-4fbe-8e7d-6b952bca216c/tournament.400.png?ck=638472068190000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "2192aa3f-ed81-4e6e-9ed6-796704e29122",
+      "name": "Coupe de l'Ain u15 filles manche 2",
+      "startDate": "2023-12-29T00:00:00",
+      "endDate": "2024-12-29T23:59:59",
+      "city": "Marboz, Ain",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/1/9/2/2192aa3f-ed81-4e6e-9ed6-796704e29122/tournament.80.png?ck=638393793240000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/1/9/2/2192aa3f-ed81-4e6e-9ed6-796704e29122/tournament.160.png?ck=638393793240000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/1/9/2/2192aa3f-ed81-4e6e-9ed6-796704e29122/tournament.400.png?ck=638393793240000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "b9d85514-dbdf-428d-b5d2-2193aad1cd14",
+      "name": "MABB LIGUE 3x3",
+      "startDate": "2024-01-05T16:00:00",
+      "endDate": "2024-10-28T23:59:00",
+      "city": "Amiens, Somme",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/b/9/d/8/b9d85514-dbdf-428d-b5d2-2193aad1cd14/tournament.80.png?ck=638421139620000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/b/9/d/8/b9d85514-dbdf-428d-b5d2-2193aad1cd14/tournament.160.png?ck=638421139620000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/b/9/d/8/b9d85514-dbdf-428d-b5d2-2193aad1cd14/tournament.400.png?ck=638421139630000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "3dd9dd7c-b8e7-48a5-b682-54d8f9362733",
+      "name": "MABB LIGUE 3X3",
+      "startDate": "2024-01-10T00:00:00",
+      "endDate": "2024-12-22T23:59:59",
+      "city": "Amiens, Somme",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/3/d/d/9/3dd9dd7c-b8e7-48a5-b682-54d8f9362733/tournament.80.png?ck=638421125680000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/3/d/d/9/3dd9dd7c-b8e7-48a5-b682-54d8f9362733/tournament.160.png?ck=638421125680000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/3/d/d/9/3dd9dd7c-b8e7-48a5-b682-54d8f9362733/tournament.400.png?ck=638421125690000000"
+    },
+    {
+      "registrationIsOpen": true,
+      "id": "642347d1-9e6c-4541-a857-f5178eaccf6b",
+      "name": "TOP 3X3 Basketball Game",
+      "startDate": "2024-02-01T00:00:00",
+      "endDate": "2031-12-31T23:59:59",
+      "city": "新北市",
+      "cityCountryIso2": "TW"
+    },
+    {
+      "registrationIsOpen": true,
+      "id": "042fb84d-e0e1-4db1-84cf-d52f5b8799ff",
+      "name": "TOP 3X3 Basketball Game",
+      "startDate": "2024-02-01T00:00:00",
+      "endDate": "2039-12-31T23:59:59",
+      "city": "新北市",
+      "cityCountryIso2": "TW"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "151ed572-76e0-4044-90e1-82cb6091356b",
+      "name": "MABB LIGUE 3x3",
+      "startDate": "2024-01-31T21:00:00",
+      "endDate": "2043-07-20T23:59:59",
+      "city": "Amiens, Somme",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/1/5/1/e/151ed572-76e0-4044-90e1-82cb6091356b/tournament.80.png?ck=638472044770000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/1/5/1/e/151ed572-76e0-4044-90e1-82cb6091356b/tournament.160.png?ck=638472044770000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/1/5/1/e/151ed572-76e0-4044-90e1-82cb6091356b/tournament.400.png?ck=638472044770000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "a680bae0-7229-4288-a02b-83110dfe4880",
+      "name": "TOP 3X3 Basketball Game",
+      "startDate": "2024-02-03T00:00:00",
+      "endDate": "2040-01-01T23:59:59",
+      "city": "新北市",
+      "cityCountryIso2": "TW"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "db976dba-a85f-4818-827a-7ba744bcf504",
+      "name": "Любит лига",
+      "startDate": "2024-02-04T00:00:00",
+      "endDate": "2024-10-27T23:59:59",
+      "city": "Караганда",
+      "cityCountryIso2": "KZ"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "6352d334-dd9e-48b7-8c64-66e8e2e7f1dc",
+      "name": "MABB LIGUE 3x3",
+      "startDate": "2024-02-21T00:00:00",
+      "endDate": "2043-03-19T23:59:59",
+      "city": "Amiens, Somme",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/3/5/2/6352d334-dd9e-48b7-8c64-66e8e2e7f1dc/tournament.80.png?ck=638469827370000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/3/5/2/6352d334-dd9e-48b7-8c64-66e8e2e7f1dc/tournament.160.png?ck=638469827370000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/6/3/5/2/6352d334-dd9e-48b7-8c64-66e8e2e7f1dc/tournament.400.png?ck=638469827370000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "9b1c2960-cf56-4ab7-a77e-91fff04b054c",
+      "name": "MABB LIGUE 3X3",
+      "startDate": "2024-02-21T21:00:00",
+      "endDate": "2045-02-16T23:59:59",
+      "city": "Amiens",
+      "cityCountryIso2": "FR",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/9/b/1/c/9b1c2960-cf56-4ab7-a77e-91fff04b054c/tournament.80.png?ck=638472079620000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/9/b/1/c/9b1c2960-cf56-4ab7-a77e-91fff04b054c/tournament.160.png?ck=638472079620000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/9/b/1/c/9b1c2960-cf56-4ab7-a77e-91fff04b054c/tournament.400.png?ck=638472079620000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "898bc449-ccc9-4636-a039-d44261c4d724",
+      "name": "SUNLIFE SPORTS SPACE",
+      "startDate": "2024-04-07T00:00:00",
+      "endDate": "2025-04-07T23:59:59",
+      "city": "Ho Chi Minh City, Ho Chi Minh City",
+      "cityCountryIso2": "VN"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "8b8aa693-65d9-41a4-bb33-060e8a22861b",
+      "name": "18u",
+      "startDate": "2024-04-20T00:00:00",
+      "endDate": "2024-07-30T23:59:59",
+      "city": "Cagayan de Oro City",
+      "cityCountryIso2": "PH"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "1fa6ae63-7885-499c-a858-e0e8c268b73a",
+      "name": "Iulius High Ballers",
+      "startDate": "2024-04-28T08:00:00",
+      "endDate": "2024-06-16T23:00:00",
+      "city": "Iași",
+      "cityCountryIso2": "RO",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/1/f/a/6/1fa6ae63-7885-499c-a858-e0e8c268b73a/tournament.80.png?ck=638469650920000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/1/f/a/6/1fa6ae63-7885-499c-a858-e0e8c268b73a/tournament.160.png?ck=638469650920000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/1/f/a/6/1fa6ae63-7885-499c-a858-e0e8c268b73a/tournament.400.png?ck=638469650920000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "4062262b-8e9b-4447-9d44-17d7d0c595cf",
+      "name": "001",
+      "startDate": "2024-04-29T00:00:00",
+      "endDate": "2024-11-11T23:59:59",
+      "city": "Japan",
+      "cityCountryIso2": "US"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "17a5df5c-b607-48d6-9191-07a5a10cee8f",
+      "name": "Got Elite Moves 3x3 Tournament Manila (City Tour)",
+      "startDate": "2024-04-30T00:00:00",
+      "endDate": "2024-06-30T23:59:00",
+      "city": "Manila",
+      "cityCountryIso2": "PH",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/1/7/a/5/17a5df5c-b607-48d6-9191-07a5a10cee8f/tournament.80.png?ck=638494015220000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/1/7/a/5/17a5df5c-b607-48d6-9191-07a5a10cee8f/tournament.160.png?ck=638494015220000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/1/7/a/5/17a5df5c-b607-48d6-9191-07a5a10cee8f/tournament.400.png?ck=638494015220000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "dafe9aaa-675e-4a80-ae45-ef734a0a9f25",
+      "name": "Test event",
+      "startDate": "2024-04-30T00:00:00",
+      "endDate": "2025-04-06T23:59:59",
+      "city": "Algiers, Alger",
+      "cityCountryIso2": "DZ"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "2698431c-5bb5-46e9-ad1a-cc8264a68e7c",
+      "name": "Westkhoops - 3x3 Spring Tournament",
+      "startDate": "2024-05-02T00:00:00",
+      "endDate": "2024-06-24T23:59:59",
+      "city": "West Kelowna",
+      "cityCountryIso2": "CA",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/6/9/8/2698431c-5bb5-46e9-ad1a-cc8264a68e7c/tournament.80.png?ck=638501833550000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/6/9/8/2698431c-5bb5-46e9-ad1a-cc8264a68e7c/tournament.160.png?ck=638501833550000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/2/6/9/8/2698431c-5bb5-46e9-ad1a-cc8264a68e7c/tournament.400.png?ck=638501833550000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "7b961568-5044-4623-8429-75afa20249f9",
+      "name": "123",
+      "startDate": "2024-05-04T00:00:00",
+      "endDate": "2024-06-08T23:59:59",
+      "city": "Beijing",
+      "cityCountryIso2": "CN"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "88e45ce6-59d0-4db9-bc3b-ab09e7453b8a",
+      "name": "Liga 3x3 Circuito Pro Veracruz",
+      "startDate": "2024-05-05T00:00:00",
+      "endDate": "2024-10-27T23:59:59",
+      "city": "Boca del Río",
+      "cityCountryIso2": "MX",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/8/8/e/4/88e45ce6-59d0-4db9-bc3b-ab09e7453b8a/tournament.80.png?ck=638488071610000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/8/8/e/4/88e45ce6-59d0-4db9-bc3b-ab09e7453b8a/tournament.160.png?ck=638488071610000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/8/8/e/4/88e45ce6-59d0-4db9-bc3b-ab09e7453b8a/tournament.400.png?ck=638488071610000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "a52448cc-be11-4c7e-9290-8bf692b4fb19",
+      "name": "Лига сильных людей II сезон",
+      "startDate": "2024-05-08T00:00:00",
+      "endDate": "2024-08-15T23:59:00",
+      "city": "Ижевск",
+      "cityCountryIso2": "RU",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/a/5/2/4/a52448cc-be11-4c7e-9290-8bf692b4fb19/tournament.80.png?ck=638495809170000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/a/5/2/4/a52448cc-be11-4c7e-9290-8bf692b4fb19/tournament.160.png?ck=638495809170000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/a/5/2/4/a52448cc-be11-4c7e-9290-8bf692b4fb19/tournament.400.png?ck=638495809170000000"
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "c3950164-5914-47ca-a448-7566d683059d",
+      "name": "Media Cancha",
+      "startDate": "2024-05-13T00:00:00",
+      "endDate": "2024-06-15T23:59:59",
+      "city": "Panamá",
+      "cityCountryIso2": "PA",
+      "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/c/3/9/5/c3950164-5914-47ca-a448-7566d683059d/tournament.80.png?ck=638509705490000000",
+      "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/c/3/9/5/c3950164-5914-47ca-a448-7566d683059d/tournament.160.png?ck=638509705490000000",
+      "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/c/3/9/5/c3950164-5914-47ca-a448-7566d683059d/tournament.400.png?ck=638509705490000000"
+    }
+  ]
+}

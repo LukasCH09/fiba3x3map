@@ -1,0 +1,52 @@
+{
+  "results": [
+    {
+      "registrationIsOpen": false,
+      "id": "f9f3d3c5-a469-4992-bf90-354fe8184b31",
+      "name": "r",
+      "startDate": "2020-11-01T00:00:00",
+      "endDate": "2026-09-04T23:59:59",
+      "city": "Seoul",
+      "cityCountryIso2": "KR",
+      "key": "Seoul783",
+      "lat": 37.5518911,
+      "lng": 126.9917937
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "21583c19-34d6-41fb-932f-c8e01fcb0082",
+      "name": "Amigos Mazatecos 3x3",
+      "startDate": "2020-12-23T00:00:00",
+      "endDate": "2024-12-23T23:59:00",
+      "city": "Huautla de Jiménez",
+      "cityCountryIso2": "MX",
+      "key": "Huautla de Jiménez434",
+      "lat": 18.130831,
+      "lng": -96.8436739
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "24d74c1a-2e9f-4f9b-8ce0-4e5a4d08bd35",
+      "name": "3x3 Lampung barat",
+      "startDate": "2021-07-01T00:00:00",
+      "endDate": "2028-07-05T23:59:59",
+      "city": "Lampung Barat, Lampung",
+      "cityCountryIso2": "ID",
+      "key": "Lampung Barat, Lampung787",
+      "lat": -5.1095293,
+      "lng": 104.1466046
+    },
+    {
+      "registrationIsOpen": false,
+      "id": "e2679888-7edd-43f6-9c36-154eaac843e8",
+      "name": "菜鸟杯",
+      "startDate": "2022-03-30T00:00:00",
+      "endDate": "2024-11-01T23:59:59",
+      "city": "Changsha Shi, Hunan",
+      "cityCountryIso2": "CN",
+      "key": "Changsha Shi, Hunan189",
+      "lat": 28.2277799,
+      "lng": 112.93886
+    }
+  ]
+}

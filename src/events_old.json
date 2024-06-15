@@ -1,0 +1,14 @@
+{"results": [
+  {
+    "registrationIsOpen": false,
+    "id": "04b23076-9cbc-443d-823d-1c619dbc5b2c",
+    "name": "test 1 dinan",
+    "startDate": "2049-12-24T00:00:00",
+    "endDate": "2050-01-01T23:59:59",
+    "city": "Dinan, Côtes-d'Armor",
+    "cityCountryIso2": "FR",
+    "imageTinyUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/0/4/b/2/04b23076-9cbc-443d-823d-1c619dbc5b2c/tournament.80.png?ck=638023020910000000",
+    "imageSmallUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/0/4/b/2/04b23076-9cbc-443d-823d-1c619dbc5b2c/tournament.160.png?ck=638023020910000000",
+    "imageMediumUrl": "https://fiba3x3cdn.azureedge.net/images/Tournament/0/4/b/2/04b23076-9cbc-443d-823d-1c619dbc5b2c/tournament.400.png?ck=638023020920000000"
+  }]
+}
