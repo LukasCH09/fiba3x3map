@@ -16,14 +16,10 @@
 import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
-  const {GOOGLE_MAPS_API_KEY = ''} = loadEnv(mode, process.cwd(), '');
-  const {IPINFO_TOKEN = ''} = loadEnv(mode, process.cwd(), '');
+  const env = loadEnv(mode, process.cwd(), '');
+
   return {
     base: '/fiba3x3map/',
-    define: {
-      'process.env.GOOGLE_MAPS_API_KEY': JSON.stringify(GOOGLE_MAPS_API_KEY),
-      'process.env.IPINFO_TOKEN': JSON.stringify(IPINFO_TOKEN)
-    },
     resolve: {
       alias: {
         '@vis.gl/react-google-maps/examples.js':
@@ -38,6 +34,9 @@ export default defineConfig(({mode}) => {
           rewrite: (path) => path.replace(/^\/api/, '')
         }
       }
+    },
+    define: {
+      'process.env': env
     }
   };
 });
