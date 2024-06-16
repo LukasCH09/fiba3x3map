@@ -32,6 +32,11 @@ export default defineConfig(({mode}) => {
           target: 'https://play.fiba3x3.com/api',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, '')
+        },
+        '/ipinfo': {
+          target: 'https://ipinfo.io',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/ipinfo/, '')
         }
       }
     },

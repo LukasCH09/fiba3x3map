@@ -23,6 +23,7 @@ import {InfoWindow} from '@react-google-maps/api';
 import {createGlobalStyle} from 'styled-components';
 
 import jsonData from './geoEvents.json';
+// import jsonDataGeoEventsFull from './geoEvents_full.json';
 import {
     Avatar,
     Container,
@@ -49,9 +50,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 async function fetchIPGeolocation(apiToken: string | undefined) {
-    const response = await fetch('https://ipinfo.io?token=' + apiToken);
+    const response = await fetch('/ipinfo?token=' + apiToken);
     const data = await response.json();
     return {
+        // lat: 46.98150140463602,
+        // lng: 7.4022910022450334
         lat: parseFloat(data.loc.split(',')[0]),
         lng: parseFloat(data.loc.split(',')[1])
     };
@@ -332,9 +335,10 @@ const App = () => {
                         }}
                     />
                     <Select
+                        label="Country"
                         value={country}
                         onChange={(e) => setCountry(e.target.value as string)}
-                    >
+                    ><label>Country</label>
                         <MenuItem value="All">All</MenuItem>
                         {countries.map((countryCode, index) => (
                             <MenuItem key={index} value={countryCode}>{countryCodes[countryCode]}</MenuItem>
@@ -342,9 +346,9 @@ const App = () => {
                     </Select>
                 </Container>
             </div>
-            <div style={{display: 'flex', height: '85vh', width: '100vw', paddingLeft: 0, paddingRight: 10}}>
+            <div style={{display: 'flex', height: '93vh', width: '100vw', paddingLeft: 0, paddingRight: 10}}>
                 {mapCenter && (<Map
-                        style={{width: '70%', height: '100%'}}
+                        style={{width: '70%', height: '90%'}}
                         defaultZoom={9}
                         defaultCenter={mapCenter}
                         mapId={'b1b2'}
