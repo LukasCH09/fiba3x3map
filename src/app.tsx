@@ -23,7 +23,6 @@ import {InfoWindow} from '@react-google-maps/api';
 import {createGlobalStyle} from 'styled-components';
 
 import jsonData from './geoEvents.json';
-// import jsonDataGeoEventsFull from './geoEvents_full.json';
 import {
     Avatar,
     Container,
@@ -50,13 +49,13 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 async function fetchIPGeolocation(apiToken: string | undefined) {
-    const response = await fetch('/ipinfo?token=' + apiToken);
-    const data = await response.json();
+    // const response = await fetch('/ipinfo?token=' + apiToken);
+    // const data = await response.json();
     return {
-        // lat: 46.98150140463602,
-        // lng: 7.4022910022450334
-        lat: parseFloat(data.loc.split(',')[0]),
-        lng: parseFloat(data.loc.split(',')[1])
+        lat: 46.98150140463602,
+        lng: 7.4022910022450334
+        // lat: parseFloat(data.loc.split(',')[0]),
+        // lng: parseFloat(data.loc.split(',')[1])
     };
 }
 
@@ -147,7 +146,7 @@ const App = () => {
             fetchEvents();
         }
 
-        fetch('./src/geoEvents_full.json', {
+        fetch('./geoEvents_full.json', {
             headers: {
                 'Cache-Control': 'no-cache'
             }
