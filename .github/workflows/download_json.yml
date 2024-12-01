@@ -13,22 +13,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Download JSON
-        run: |
-          #!/bin/bash
-          # Fetch JSON data with User-Agent header
-          curl -s -H "User-Agent: Mozilla/5.0"  -H "Accept: application/json" 'https://play.fiba3x3.com/api/v2/search/events?name=&input=&when=future&distance=1000&pageNum=1' -o daily_tournament_fetch.json
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-          # Check if the fetched data is valid JSON
-          if jq empty daily_tournament_fetch.json; then
-            # Format JSON data
-            jq . daily_tournament_fetch.json > formatted_daily_tournament_fetch.json
-            mv formatted_daily_tournament_fetch.json daily_tournament_fetch.json
-          else
-            echo "Fetched data is not valid JSON."
-            cat daily_tournament_fetch.json
-            exit 1
-          fi
+      - name: Install dependencies
+        run: npm install
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Download JSON
+        run: node download_json.js
 
       - name: Commit and push JSON file
         run: |
