@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Download JSON
-        run: node download_json.js
+        run: node src\download_json.js
 
       - name: Commit and push JSON file
         run: |
