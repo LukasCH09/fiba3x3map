@@ -19,9 +19,6 @@ jobs:
           # Fetch JSON data with User-Agent header
           curl -s -H "User-Agent: Mozilla/5.0" 'https://play.fiba3x3.com/api/v2/search/events?name=&input=&when=future&distance=1000&pageNum=1' -o daily_tournament_fetch.json
 
-          # Fetch JSON data
-          curl -s 'https://play.fiba3x3.com/api/v2/search/events?name=&input=&when=future&distance=1000&pageNum=1' -o daily_tournament_fetch.json
-
           # Check if the fetched data is valid JSON
           if jq empty daily_tournament_fetch.json; then
             # Format JSON data
