@@ -19,9 +19,16 @@ jobs:
           # Fetch JSON data
           curl -s 'https://play.fiba3x3.com/api/v2/search/events?name=&input=&when=future&distance=1000&pageNum=1' -o daily_tournament_fetch.json
 
-          # Format JSON data (optional)
-          jq . daily_tournament_fetch.json > formatted_daily_tournament_fetch.json
-          mv formatted_daily_tournament_fetch.json daily_tournament_fetch.json
+          # Check if the fetched data is valid JSON
+          if jq empty daily_tournament_fetch.json; then
+            # Format JSON data
+            jq . daily_tournament_fetch.json > formatted_daily_tournament_fetch.json
+            mv formatted_daily_tournament_fetch.json daily_tournament_fetch.json
+          else
+            echo "Fetched data is not valid JSON."
+            cat daily_tournament_fetch.json
+            exit 1
+          fi
 
       - name: Commit and push JSON file
         run: |
