@@ -57,6 +57,5 @@ yarn-debug.log*
 /build
 
 # misc
-.DS_Store
 .env.local
 yarn-error.log*

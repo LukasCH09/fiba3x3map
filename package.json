@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "homepage": "http://LukasCH09.github.io/fiba3x3map",
+  "homepage": "https://LukasCH09.github.io/fiba3x3map",
   "dependencies": {
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.20",

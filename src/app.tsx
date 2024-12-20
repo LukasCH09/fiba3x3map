@@ -16,7 +16,14 @@
 
 import React, {useEffect, useState} from 'react';
 import {createRoot} from "react-dom/client";
-import {AdvancedMarker, APIProvider, Map, MapCameraChangedEvent} from '@vis.gl/react-google-maps';
+import {
+    AdvancedMarker,
+    APIProvider,
+    Map,
+    MapCameraChangedEvent,
+    MapEvent,
+    MapMouseEvent
+} from '@vis.gl/react-google-maps';
 import {Location, Marker} from './types';
 import "react-datepicker/dist/react-datepicker.css";
 import {InfoWindow} from '@react-google-maps/api';
@@ -44,16 +51,33 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         overflow: hidden;
-        width: 100%;
+        //width: 90%;
+        height: 100%;
+    }
+    .css-h4y409-MuiList-root {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    }
+
+    body > div:first-child {
+        max-width: 100%;
+        max-height: 100vh; /* Adjust based on your needs */
+        //overflow: auto; /* Allows scrolling within the div if content is larger than the div */
     }
 `;
 
-async function fetchIPGeolocation() {
-    const response = await fetch('http://ip-api.com/json');
-    const data = await response.json();
+async function fetchIPGeolocation(apiToken: string | undefined) {
+    // const response = await fetch('/ipinfo?token=' + apiToken);
+    // const data = await response.json();
     return {
-        lat: data.lat,
-        lng: data.lon
+        lat: 46.98150140463602,
+        lng: 7.4022910022450334
+        // lat: parseFloat(data.loc.split(',')[0]),
+        // lng: parseFloat(data.loc.split(',')[1])
     };
 }
 
@@ -123,15 +147,19 @@ const App = () => {
     const [visibleMarkers, setVisibleMarkers] = useState<Marker[]>([]);
     const [mapBounds, setMapBounds] = useState<google.maps.LatLngBounds | undefined>(undefined);
     const [locationsWithKey, setLocationsWithKey] = useState<Location[]>([]);
-    const [mapCenter, setMapCenter] = useState({lat: 0, lng: 0});
+    const [mapCenter, setMapCenter] = useState<null | { lat: number, lng: number }>(null);
 
     const [hasFetchedCoordinates, setHasFetchedCoordinates] = useState(true);
     const shouldFetchEvents = false;
     const shouldFetchCoordinates = true;
+
+    const apiKey = process.env.GOOGLE_MAPS_API_KEY;
+    const apiToken = process.env.IPINFO_TOKEN;
+
     console.log("App")
 
     useEffect(() => {
-            fetchIPGeolocation().then(setMapCenter).catch(console.error);
+            fetchIPGeolocation(apiToken).then(setMapCenter).catch(console.error);
         }
         , []);
 
@@ -140,7 +168,7 @@ const App = () => {
             fetchEvents();
         }
 
-        fetch('./src/geoEvents_full.json', {
+        fetch('./geoEvents_full.json', {
             headers: {
                 'Cache-Control': 'no-cache'
             }
@@ -165,7 +193,7 @@ const App = () => {
                     .filter((location: {
                         cityCountryIso2: string;
                     }) => country === 'All' || location.cityCountryIso2 === country);
-                    // .filter((event: { registrationIsOpen: boolean; }) => event.registrationIsOpen);
+                // .filter((event: { registrationIsOpen: boolean; }) => event.registrationIsOpen);
 
                 const newLocationsWithKey = locations.map((location: { city: any; }) => {
                     let city = location.city;
@@ -288,7 +316,6 @@ const App = () => {
 
         return `${year}-${month}-${day}`;
     };
-    const apiKey = process.env.GOOGLE_MAPS_API_KEY;
 
     if (!apiKey) {
         throw new Error("Google Maps API key is not set in the environment variables");
@@ -296,10 +323,14 @@ const App = () => {
 
     return (
         <APIProvider apiKey={apiKey}
-                     onLoad={() => console.log('Maps API has loaded.')}>
+                     onLoad={() => {
+                         console.log('Maps API has loaded.');
+                         setMapBounds(mapBounds);
+                         updateVisibleMarkers()
+                     }}>
             <GlobalStyle/>
 
-            <div style={{margin: 0, padding: 0}}>
+            <div style={{margin: 0, padding: 0, maxHeight: '150px', height: '20vh', width: '100vw'}}>
                 <Container>
                     <Typography variant="h2">FIBA 3x3 Map</Typography>
                     <TextField
@@ -329,9 +360,10 @@ const App = () => {
                         }}
                     />
                     <Select
+                        label="Country"
                         value={country}
                         onChange={(e) => setCountry(e.target.value as string)}
-                    >
+                    ><label>Country</label>
                         <MenuItem value="All">All</MenuItem>
                         {countries.map((countryCode, index) => (
                             <MenuItem key={index} value={countryCode}>{countryCodes[countryCode]}</MenuItem>
@@ -339,38 +371,40 @@ const App = () => {
                     </Select>
                 </Container>
             </div>
-            <div style={{display: 'flex', height: '85vh', width: '100vw', paddingLeft: 0, paddingRight: 10}}>
-                <Map
-                    style={{width: '70%', height: '100%'}}
-                    defaultZoom={13}
-                    defaultCenter={mapCenter}
-                    mapId={'b1b2'}
-                    onIdle={(event) => {
-                        setMapBounds(event.map.getBounds());
-                        updateVisibleMarkers();
-                    }}
-                    onCameraChanged={(ev: MapCameraChangedEvent) => {
-                        console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom);
-                        updateVisibleMarkers();
-                    }}>
-                    {markers.map((marker: Marker) => (
-                        <AdvancedMarker key={marker.id}
-                                        position={marker}
-                                        onClick={() => setSelectedMarker(marker)}
-                        />
-                    ))}
+            <div style={{display: 'flex', minHeight:'inherit',  height: '80vh'  , width: '100vw', paddingLeft: 0, paddingRight: 0}}>
+                {mapCenter && (<Map
+                        // style={{width: '70%', height: '100%'}}
+                        defaultZoom={9}
+                        defaultCenter={mapCenter}
+                        mapId={'b1b2'}
+                        onIdle={(event) => {
+                            setMapBounds(event.map.getBounds());
+                            updateVisibleMarkers();
+                        }}
+                        onCameraChanged={(ev: MapCameraChangedEvent) => {
+                            console.log('camera changed:', ev.detail.center, 'zoom:', ev.detail.zoom);
+                            setMapBounds(ev.map.getBounds());
+                            updateVisibleMarkers();
+                        }}>
+                        {markers.map((marker: Marker) => (
+                            <AdvancedMarker key={marker.id}
+                                            position={marker}
+                                            onClick={() => setSelectedMarker(marker)}
+                            />
+                        ))}
 
-                    {selectedMarker && (
-                        <InfoWindow
-                            position={{lat: selectedMarker.lat, lng: selectedMarker.lng}}
-                            onCloseClick={() => setSelectedMarker(null)}
-                        >
-                            <p>
-                                <strong>{selectedMarker.name}</strong>
-                            </p>
-                        </InfoWindow>
-                    )}
-                </Map>
+                        {selectedMarker && (
+                            <InfoWindow
+                                position={{lat: selectedMarker.lat, lng: selectedMarker.lng}}
+                                onCloseClick={() => setSelectedMarker(null)}
+                            >
+                                <p>
+                                    <strong>{selectedMarker.name}</strong>
+                                </p>
+                            </InfoWindow>
+                        )}
+                    </Map>
+                )}
 
                 <List style={{
                     width: '30%',
@@ -378,18 +412,18 @@ const App = () => {
                     // maxWidth: 360,
                     overflowY: 'auto',
                     color: 'background.paper',
-                    paddingRight: 10
+                    paddingRight: 0
                 }}>
                     {visibleMarkers.map((marker: Marker) => (
                         <div key={marker.id}>
-                            <ListItem alignItems="flex-start">
+                            <ListItem alignItems="flex-start" style={{paddingTop: 0, paddingBottom: 0}}>
                                 <ListItemAvatar style={{paddingTop: 12}}>
                                     <Avatar
                                         alt={marker.name}
                                         src={marker.imageTinyUrl ? marker.imageTinyUrl : "https://seeklogo.com/images/1/3x3-fiba-logo-8E30FF6692-seeklogo.com.png"}
                                     />
                                 </ListItemAvatar>
-                                <ListItemText style={{display: 'inline', paddingTop: 0}}
+                                <ListItemText style={{display: 'inline', padding: 0}}
                                               secondary={
                                                   <React.Fragment>
                                                       <Typography
@@ -406,17 +440,19 @@ const App = () => {
                                                       </Typography>
                                                       <div className="row">
                                                           <div className="column" style={{float: "left", width: "50%"}}>
-                                                              <p style={{lineHeight: 0.5}}>City: {marker.city}</p>
-                                                              <p style={{lineHeight: 0.5}}>Country: {countryCodes[marker.cityCountryIso2]}</p>
-                                                              <p style={{lineHeight: 0.5}}>Registration
+                                                              <p >City: {marker.city}</p>
+                                                              <p >Country: {countryCodes[marker.cityCountryIso2]}</p>
+                                                              <p >Registration
                                                                   Open: {marker.registrationIsOpen ? 'Yes' : 'No'}</p>
                                                           </div>
                                                           <div className="column" style={{float: "left", width: "50%"}}>
-                                                              <p style={{lineHeight: 0.5}}>
-                                                                  Start Date: {new Date(marker.startDate).toISOString().split('T')[0]}
+                                                              <p >
+                                                                  Start
+                                                                  Date: {new Date(marker.startDate).toISOString().split('T')[0]}
                                                               </p>
-                                                              <p style={{lineHeight: 0.5}}>
-                                                                  End Date: {new Date(marker.endDate).toISOString().split('T')[0]}
+                                                              <p >
+                                                                  End
+                                                                  Date: {new Date(marker.endDate).toISOString().split('T')[0]}
                                                               </p>
                                                           </div>
                                                       </div>

@@ -17,11 +17,14 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const {GOOGLE_MAPS_API_KEY = ''} = loadEnv(mode, process.cwd(), '');
+  const {IPINFO_TOKEN = ''} = loadEnv(mode, process.cwd(), '');
 
   return {
     define: {
-      'process.env.GOOGLE_MAPS_API_KEY': JSON.stringify(GOOGLE_MAPS_API_KEY)
+      'process.env.GOOGLE_MAPS_API_KEY': JSON.stringify(GOOGLE_MAPS_API_KEY),
+      'process.env.IPINFO_TOKEN': JSON.stringify(IPINFO_TOKEN)
     },
+    base: '/fiba3x3map/',
     resolve: {
       alias: {
         '@vis.gl/react-google-maps/examples.js':
@@ -34,6 +37,11 @@ export default defineConfig(({mode}) => {
           target: 'https://play.fiba3x3.com/api',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, '')
+        },
+        '/ipinfo': {
+          target: 'https://ipinfo.io',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/ipinfo/, '')
         }
       }
     }
