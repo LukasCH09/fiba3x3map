@@ -2,14 +2,13 @@
   "type": "module",
   "homepage": "http://LukasCH09.github.io/fiba3x3map",
   "dependencies": {
-    "node-fetch": "^3.2.0",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.20",
     "@vis.gl/react-google-maps": "latest",
     "react": "^18.3.1",
     "react-datepicker": "^7.0.0",
     "react-dom": "^18.3.1",
-    "vite": "^5.3.6"
+    "vite": "^5.3.1"
   },
   "scripts": {
     "start": "vite",
