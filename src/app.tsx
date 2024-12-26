@@ -29,7 +29,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import {InfoWindow} from '@react-google-maps/api';
 import {createGlobalStyle} from 'styled-components';
 
-import jsonData from './geoEvents.json';
 import {
     Avatar,
     Container,
@@ -86,10 +85,6 @@ async function fetchEvents() {
     let nextPageNum;
     let numPagesToLoad = 0;
     let allResults = [];
-
-    // Read the file and parse the JSON data
-    // const jsonData = JSON.parse(data);
-    const fileEventCount = jsonData.results.length;
 
     // Initial fetch request to get totalCount
     const initialResponse = await fetch(`/api/v2/search/events?name=&input=&when=future&distance=1000&pageNum=${pageNum}`);
@@ -168,7 +163,7 @@ const App = () => {
             fetchEvents();
         }
 
-        fetch('./geoEvents_full.json', {
+        fetch('./geoEvents.json', {
             headers: {
                 'Cache-Control': 'no-cache'
             }
@@ -181,7 +176,7 @@ const App = () => {
             })
             .then(data => {
                 const uniqueIds = new Set();
-                const locations = JSON.parse(JSON.stringify(data.results))
+                const locations = JSON.parse(JSON.stringify(data.events))
                     .filter((event: { id: unknown; }) => {
                         if (uniqueIds.has(event.id)) {
                             return false;
@@ -251,7 +246,7 @@ const App = () => {
                     const link = document.createElement("a");
 
                     // Set the download attribute of the link
-                    link.download = "geoEvents.json";
+                    link.download = "geoEvents_s.json";
 
                     // Create a URL for the link
                     link.href = URL.createObjectURL(blob);
