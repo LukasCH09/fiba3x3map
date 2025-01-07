@@ -60,6 +60,38 @@ const GlobalStyle = createGlobalStyle`
     max-height: 100vh; /* Adjust based on your needs */
     //overflow: auto; /* Allows scrolling within the div if content is larger than the div */
   }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .map {
+    flex: 1;
+  }
+
+  .events-list {
+    width: 30%;
+    height: 100%;
+    overflow-y: auto;
+    color: background.paper;
+    padding-right: 0;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .events-list {
+      width: 100%;
+      height: 50%;
+    }
+  }
 `;
 
 async function fetchIPGeolocation(apiToken: string | undefined) {
@@ -257,14 +289,7 @@ const App = () => {
             </Select>
           </Container>
         </div>
-        <div style={{
-          display: 'flex',
-          minHeight: 'inherit',
-          height: '80vh',
-          width: '100vw',
-          paddingLeft: 0,
-          paddingRight: 0
-        }}>
+        <div className="container">
           {mapCenter && (<Map
                   // style={{width: '70%', height: '100%'}}
                   defaultZoom={9}
@@ -299,14 +324,7 @@ const App = () => {
               </Map>
           )}
 
-          <List style={{
-            width: '30%',
-            height: '100%',
-            // maxWidth: 360,
-            overflowY: 'auto',
-            color: 'background.paper',
-            paddingRight: 0
-          }}>
+          <List className="events-list">
             {visibleMarkers.map((marker: Marker) => (
                 <div key={marker.id}>
                   <ListItem alignItems="flex-start" style={{paddingTop: 0, paddingBottom: 0}}>
