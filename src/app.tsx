@@ -19,7 +19,6 @@ import {createRoot} from "react-dom/client";
 import {AdvancedMarker, APIProvider, Map, MapCameraChangedEvent} from '@vis.gl/react-google-maps';
 import {Location, Marker} from './types';
 import "react-datepicker/dist/react-datepicker.css";
-import {InfoWindow} from '@react-google-maps/api';
 import {createGlobalStyle} from 'styled-components';
 
 import {
@@ -60,11 +59,18 @@ const GlobalStyle = createGlobalStyle`
     max-height: 100vh; /* Adjust based on your needs */
     //overflow: auto; /* Allows scrolling within the div if content is larger than the div */
   }
+  
+  .header {
+    margin: 0;
+    padding: 0;
+    height: 15vh;
+    width: 100vw;
+  }
 
   .container {
     display: flex;
     flex-direction: row;
-    height: 80vh;
+    height: calc(100vh - 15vh); /* Adjust the height to use the freed upper space */
     width: 100vw;
     padding-left: 0;
     padding-right: 0;
@@ -72,6 +78,7 @@ const GlobalStyle = createGlobalStyle`
 
   .map {
     flex: 1;
+    height: 100%;
   }
 
   .events-list {
@@ -83,31 +90,68 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media (max-width: 768px) {
+
+    .header {
+      margin: 0;
+      padding: 0;
+      height: 12vh;
+      width: 100vw;
+    }
+    
     .container {
       flex-direction: column;
+      height: calc(100vh - 13vh); /* Adjust the height for small screens */
     }
 
     .events-list {
       width: 100%;
-      height: 50%;
+      height: 90%;
+    }
+
+    .title {
+      font-size: 1.5rem; /* Adjust the font size for small screens */
+    }
+
+    .MuiTextField-root, .MuiSelect-root {
+      font-size: 0.5rem; /* Adjust the font size for the fields */
+      width: 40%; /* Make the fields take full width */
+    }
+
+    .MuiListItemText-root {
+      font-size: 0.25rem; /* Adjust the font size for ListItemText on small screens */
+    }
+
+    .css-hhvo2v-MuiListItem-root {
+      padding-right: 5px; 
+      padding-left: 10px;
+    }
+
+    .css-1m6607n-MuiListItemAvatar-root {
+      min-width: 50px;
+    }
+
+    .css-1sra7t5-MuiTypography-root {
+      margin-bottom: 5px;
+      padding-bottom: 10px;
+    }
+
+    .css-1oqqzyl-MuiContainer-root {
+      padding-left: 7px;
+      padding-right: 7px;
     }
   }
 `;
 
 async function fetchIPGeolocation(apiToken: string | undefined) {
-  // const response = await fetch('/ipinfo?token=' + apiToken);
-  // const data = await response.json();
   return {
     lat: 46.98150140463602,
     lng: 7.4022910022450334
-    // lat: parseFloat(data.loc.split(',')[0]),
-    // lng: parseFloat(data.loc.split(',')[1])
   };
 }
 
 const App = () => {
   const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date(new Date().setMonth(new Date().getMonth() + 6)));
+  const [endDate, setEndDate] = useState(new Date(new Date().setMonth(new Date().getMonth() + 12)));
   const [country, setCountry] = useState('All');
   const [countries, setCountries] = useState<string[]>([]);
 
@@ -177,7 +221,7 @@ const App = () => {
 
       // Define the start and end indices of the subset
       const start = 0;
-      const end = 2000; // Change this to the number of elements you want to copy
+      const end = 3000; // Change this to the number of elements you want to copy
 
       // Use the slice method to get a subset of newLocationsWithKey
       const subset = newLocationsWithKey.slice(start, end);
@@ -248,12 +292,13 @@ const App = () => {
                    }}>
         <GlobalStyle/>
 
-        <div style={{margin: 0, padding: 0, maxHeight: '150px', height: '20vh', width: '100vw'}}>
+        <div className="header">
           <Container>
-            <Typography variant="h2">FIBA 3x3 Map</Typography>
+            <Typography variant="h2" className="title">FIBA 3x3 Map</Typography>
             <TextField
                 id="date"
                 label="Start Date"
+                size="small"
                 type="date"
                 defaultValue={formatDate(startDate)}
                 InputLabelProps={{
@@ -267,6 +312,7 @@ const App = () => {
             <TextField
                 id="date"
                 label="End Date"
+                size="small"
                 type="date"
                 defaultValue={formatDate(endDate)}
                 InputLabelProps={{
@@ -279,6 +325,7 @@ const App = () => {
             />
             <Select
                 label="Country"
+                size="small"
                 value={country}
                 onChange={(e) => setCountry(e.target.value as string)}
             ><label>Country</label>
@@ -291,7 +338,6 @@ const App = () => {
         </div>
         <div className="container">
           {mapCenter && (<Map
-                  // style={{width: '70%', height: '100%'}}
                   defaultZoom={9}
                   defaultCenter={mapCenter}
                   mapId={'b1b2'}
@@ -310,17 +356,6 @@ const App = () => {
                                     onClick={() => setSelectedMarker(marker)}
                     />
                 ))}
-
-                {selectedMarker && (
-                    <InfoWindow
-                        position={{lat: selectedMarker.lat, lng: selectedMarker.lng}}
-                        onCloseClick={() => setSelectedMarker(null)}
-                    >
-                      <p>
-                        <strong>{selectedMarker.name}</strong>
-                      </p>
-                    </InfoWindow>
-                )}
               </Map>
           )}
 
@@ -349,34 +384,31 @@ const App = () => {
                                           </a>
                                         </strong>
                                       </Typography>
-                                      <div className="row">
-                                        <div className="column"
+                                      <span className="row">
+                                        <span className="column"
                                              style={{float: "left", width: "50%"}}>
-                                          <p>City: {marker.city}</p>
-                                          <p>Country: {countryCodes[marker.cityCountryIso2]}</p>
-                                          <p>Registration
-                                            Open: {marker.registrationIsOpen ? 'Yes' : 'No'}</p>
-                                        </div>
-                                        <div className="column"
+                                          <span>City: {marker.city}</span><br/>
+                                          <span>Country: {countryCodes[marker.cityCountryIso2]}</span><br/>
+                                          <span>Registration
+                                            Open: {marker.registrationIsOpen ? 'Yes' : 'No'}</span>
+                                        </span>
+                                        <span className="column"
                                              style={{float: "left", width: "50%"}}>
-                                          <p>
+                                          <span>
                                             Start
                                             Date: {new Date(marker.startDate).toISOString().split('T')[0]}
-                                          </p>
-                                          <p>
+                                          </span><br/>
+                                          <span>
                                             End
                                             Date: {new Date(marker.endDate).toISOString().split('T')[0]}
-                                          </p>
-                                        </div>
-                                      </div>
+                                          </span><br/>
+                                        </span>
+                                      </span>
                                     </React.Fragment>
                                   }
                     />
                   </ListItem>
                   <Divider variant="inset" component="li"/>
-
-                  {/*<p>Start Date: {new Date(marker.startDate).toISOString().split('T')[0]}</p>*/}
-                  {/*<p>End Date: {new Date(marker.endDate).toISOString().split('T')[0]}</p>*/}
                 </div>
             ))}
           </List>
