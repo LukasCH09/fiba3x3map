@@ -189,7 +189,7 @@ const App = () => {
     })
     .then(data => {
       const uniqueIds = new Set();
-      const locations = JSON.parse(JSON.stringify(data.events))
+      const locations = JSON.parse(JSON.stringify(data))
       .filter((event: { id: unknown; }) => {
         if (uniqueIds.has(event.id)) {
           return false;
