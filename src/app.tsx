@@ -201,7 +201,6 @@ const App = () => {
       .filter((location: {
         cityCountryIso2: string;
       }) => country === 'All' || location.cityCountryIso2 === country);
-      // .filter((event: { registrationIsOpen: boolean; }) => event.registrationIsOpen);
 
       const newLocationsWithKey = locations.map((location: { city: any; }) => {
         let city = location.city;
