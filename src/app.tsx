@@ -16,6 +16,8 @@
 
 import React, {useEffect, useState} from 'react';
 import {createRoot} from "react-dom/client";
+import {countryCodes} from "./countryCodes";
+import {BrowserRouter} from "react-router-dom";
 import {AdvancedMarker, APIProvider, Map, MapCameraChangedEvent} from '@vis.gl/react-google-maps';
 import {Location, Marker} from './types';
 import "react-datepicker/dist/react-datepicker.css";
@@ -34,7 +36,6 @@ import {
   TextField,
   Typography
 } from '@mui/material';
-import {countryCodes} from "./countryCodes";
 
 const GlobalStyle = createGlobalStyle`
   body, html {
@@ -425,7 +426,9 @@ if (!appElement) {
 const root = createRoot(appElement);
 root.render(
     <React.StrictMode>
-      <App/>
+      <BrowserRouter>
+        <App/>
+      </BrowserRouter>
     </React.StrictMode>
 );
 
