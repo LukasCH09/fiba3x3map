@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
     max-height: 100vh; /* Adjust based on your needs */
     //overflow: auto; /* Allows scrolling within the div if content is larger than the div */
   }
-
+  
   .header {
     margin: 0;
     padding: 0;
@@ -97,7 +97,7 @@ const GlobalStyle = createGlobalStyle`
       height: 12vh;
       width: 100vw;
     }
-
+    
     .container {
       flex-direction: column;
       height: calc(100vh - 13vh); /* Adjust the height for small screens */
@@ -122,7 +122,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .css-hhvo2v-MuiListItem-root {
-      padding-right: 5px;
+      padding-right: 5px; 
       padding-left: 10px;
     }
 
@@ -385,14 +385,14 @@ const App = () => {
                                       </Typography>
                                       <span className="row">
                                         <span className="column"
-                                              style={{float: "left", width: "50%"}}>
+                                             style={{float: "left", width: "50%"}}>
                                           <span>City: {marker.city}</span><br/>
                                           <span>Country: {countryCodes[marker.cityCountryIso2]}</span><br/>
                                           <span>Registration
                                             Open: {marker.registrationIsOpen ? 'Yes' : 'No'}</span>
                                         </span>
                                         <span className="column"
-                                              style={{float: "left", width: "50%"}}>
+                                             style={{float: "left", width: "50%"}}>
                                           <span>
                                             Start
                                             Date: {new Date(marker.startDate).toISOString().split('T')[0]}
@@ -423,10 +423,6 @@ if (!appElement) {
 }
 
 const root = createRoot(appElement);
-root.render(
-    <React.StrictMode>
-      <App/>
-    </React.StrictMode>
-);
+root.render(<App/>);
 
 export default App;
