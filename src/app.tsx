@@ -17,7 +17,7 @@
 import React, {useEffect, useState} from 'react';
 import {createRoot} from "react-dom/client";
 import {countryCodes} from "./countryCodes";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 import {AdvancedMarker, APIProvider, Map, MapCameraChangedEvent} from '@vis.gl/react-google-maps';
 import {Location, Marker} from './types';
 import "react-datepicker/dist/react-datepicker.css";
@@ -150,7 +150,7 @@ async function fetchIPGeolocation(apiToken: string | undefined) {
   };
 }
 
-const FibaMap = () => {
+const App = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date(new Date().setMonth(new Date().getMonth() + 12)));
   const [country, setCountry] = useState('All');
@@ -421,16 +421,6 @@ const FibaMap = () => {
 const appElement = document.getElementById('app');
 if (!appElement) {
   throw new Error("Could not find element with id 'app'");
-}
-
-const App = () => {
-  return (
-      <div className="App">
-        <Routes>
-          <Route path="/fiba3x3map" element={<FibaMap/>}/>
-        </Routes>
-      </div>
-  );
 }
 
 const root = createRoot(appElement);
