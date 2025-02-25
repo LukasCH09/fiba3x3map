@@ -427,10 +427,7 @@ const App = () => {
   return (
       <div className="App">
         <Routes>
-          <Route path="/" element={<FibaMap/>}/>
           <Route path="/fiba3x3map" element={<FibaMap/>}/>
-          <Route path="*"
-                 element={<div>404 Not Found</div>}/> {/* Default route for unmatched paths */}
         </Routes>
       </div>
   );

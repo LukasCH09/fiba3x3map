@@ -25,7 +25,7 @@ export default defineConfig(({mode}) => {
       'process.env.GOOGLE_MAPS_API_KEY': JSON.stringify(GOOGLE_MAPS_API_KEY),
       'process.env.IPINFO_TOKEN': JSON.stringify(IPINFO_TOKEN)
     },
-    base: '/',
+    base: '/fiba3x3map/',
     resolve: {
       alias: {
         '@vis.gl/react-google-maps/examples.js':
