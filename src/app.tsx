@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {createRoot} from "react-dom/client";
-import {Location, Marker} from './types';
 import "react-datepicker/dist/react-datepicker.css";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import TermsAndConditions from './TermsAndConditions';
